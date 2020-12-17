@@ -1,0 +1,12 @@
+/*DROP TABLE tasks;
+CREATE TABLE tasks (
+
+  id LONG AUTO_INCREMENT  PRIMARY KEY,
+
+  first_name VARCHAR(100) NOT NULL,
+
+  task_description VARCHAR(250) DEFAULT NULL,
+
+  estado VARCHAR(250) DEFAULT NULL
+
+);*/
