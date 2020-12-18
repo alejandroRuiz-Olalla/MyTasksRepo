@@ -112,4 +112,27 @@ class TaskControllerTest {
 				.andExpect(content().json("{'id':2,'first_name':'Segunda tarea','task_description':'','estado':'Completada'}"))
 				.andReturn();
 	}
+//	@Test
+//    public void CheckUpdate() throws Exception {
+//        Task task =  new Task((long) 2, "Siguiente tarea", "Estamos insertando una nueva tarea", "Pendiente");
+//        when(tasksService.update(
+//        		task.getId(), 
+//        		task.getFirstName(), 
+//        		task.getTaskDescription(), 
+//        		task.getEstado())).thenReturn(
+//            "Tarea modificada");
+//        RequestBuilder request = MockMvcRequestBuilders
+//                .put("/tasks/update/" + task.getId())
+//                .content("{\"estado\": \"Pendiente\", \"taskDescription\": \"Estamos insertando una nueva tarea\", \"firstName\": \"Siguiente tarea\"}")
+//                .accept(MediaType.APPLICATION_JSON)
+//                .contentType(MediaType.APPLICATION_JSON);
+//        
+//        MvcResult result = mvc.perform(request)
+//                .andExpect(status().isCreated())
+//                .andExpect(content().string("Tarea modificada"))
+//                .andReturn();
+// 
+//        //verify "Hello World"
+//        //assertEquals("Hello World", result.getResponse().getContentAsString());
+//    }  
 }
