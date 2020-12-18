@@ -107,7 +107,7 @@ class TaskControllerTest {
 				.delete("/task/2")
 				.accept(MediaType.APPLICATION_JSON);
 		
-		/*MvcResult result = */mockMvc.perform(request)
+		mockMvc.perform(request)
 				.andExpect(status().isOk())
 				.andExpect(content().json("{'id':2,'first_name':'Segunda tarea','task_description':'','estado':'Completada'}"))
 				.andReturn();
