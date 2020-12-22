@@ -67,6 +67,11 @@ public class Task {
 			return false;
 		return true;
 	}
+	@Override
+	public String toString() {
+		return "Task [id=" + id + ", firstName=" + firstName + ", taskDescription=" + taskDescription + ", estado="
+				+ estado + "]";
+	}
 	public String getFirstName() {
 		return firstName;
 	}

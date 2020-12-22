@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.everisdarmytasksms.modelo.Task;
 import com.example.everisdarmytasksms.service.TaskService;
 
+@CrossOrigin(origins= "http://localhost:4200", maxAge = 3600)
 @RestController
 public class TasksController {
 	@Autowired
@@ -40,7 +42,7 @@ public class TasksController {
 	}
 	
 	@RequestMapping(value="/task",method=RequestMethod.POST)
-	public Task insert(Task task) {
+	public Task insert(@RequestBody Task task) {
 		return taskService.saveByEntity(task);
 	}
 	
